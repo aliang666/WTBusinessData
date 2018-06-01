@@ -14,5 +14,5 @@
 @property (nonatomic,copy) NSString *remainLicenseDays;
 @property (nonatomic,copy) NSString *sex;
 @property (nonatomic,copy) NSString *iMLogin;
-+ (instancetype)shareInstance
++ (instancetype)shareInstance;
 @end
