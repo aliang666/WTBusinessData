@@ -10,6 +10,7 @@
 		5084EB2620BA923C00486ED9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5084EB2520BA923C00486ED9 /* AppDelegate.m */; };
 		5084EB2E20BA923C00486ED9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5084EB2D20BA923C00486ED9 /* Assets.xcassets */; };
 		5084EB3420BA923C00486ED9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5084EB3320BA923C00486ED9 /* main.m */; };
+		84E4531220C0F384008EA9A2 /* Language.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84E4531420C0F384008EA9A2 /* Language.strings */; };
 		D51BDB747FD5A1708CA301D1 /* libPods-WTEmptyProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56157DDC4FE2FE072667820E /* libPods-WTEmptyProject.a */; };
 /* End PBXBuildFile section */
 
@@ -22,6 +23,8 @@
 		5084EB3320BA923C00486ED9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5084EB3F20BA97C200486ED9 /* WTEmptyProject.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTEmptyProject.pch; sourceTree = "<group>"; };
 		56157DDC4FE2FE072667820E /* libPods-WTEmptyProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WTEmptyProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84E4531320C0F384008EA9A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Language.strings; sourceTree = "<group>"; };
+		84E4531520C0F3A4008EA9A2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Language.strings"; sourceTree = "<group>"; };
 		D21F50B03A03B94BABEEF5C8 /* Pods-WTEmptyProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WTEmptyProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WTEmptyProject/Pods-WTEmptyProject.debug.xcconfig"; sourceTree = "<group>"; };
 		FD8BF12050C099B6CACEB230 /* Pods-WTEmptyProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WTEmptyProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-WTEmptyProject/Pods-WTEmptyProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +76,7 @@
 				5084EB2D20BA923C00486ED9 /* Assets.xcassets */,
 				5084EB3220BA923C00486ED9 /* Info.plist */,
 				5084EB3320BA923C00486ED9 /* main.m */,
+				84E4531420C0F384008EA9A2 /* Language.strings */,
 			);
 			path = WTEmptyProject;
 			sourceTree = "<group>";
@@ -131,6 +135,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 5084EB1820BA923C00486ED9;
 			productRefGroup = 5084EB2220BA923C00486ED9 /* Products */;
@@ -147,6 +152,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84E4531220C0F384008EA9A2 /* Language.strings in Resources */,
 				5084EB2E20BA923C00486ED9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,11 +226,24 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		84E4531420C0F384008EA9A2 /* Language.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84E4531320C0F384008EA9A2 /* en */,
+				84E4531520C0F3A4008EA9A2 /* zh-Hans */,
+			);
+			name = Language.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		5084EB3520BA923C00486ED9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -280,6 +299,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -331,7 +351,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M84U73LEMN;
+				DEVELOPMENT_TEAM = Y5EQM97VAW;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WTEmptyProject/WTEmptyProject.pch";
 				INFOPLIST_FILE = WTEmptyProject/Info.plist;
@@ -349,7 +369,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M84U73LEMN;
+				DEVELOPMENT_TEAM = Y5EQM97VAW;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/WTEmptyProject/WTEmptyProject.pch";
 				INFOPLIST_FILE = WTEmptyProject/Info.plist;

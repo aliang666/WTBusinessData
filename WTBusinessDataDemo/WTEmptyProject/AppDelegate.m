@@ -37,7 +37,9 @@
         if ([[responseObject[@"code"] strRelay] isEqualToString:@"1000"]) {
             NSDictionary *dic = responseObject[@"content"];
             if (dic) {
-//                WTLoginInfo *info = [[WTLoginInfo shareInstance] jsonObjectToLoginInfo:dic];
+//                [WTLoginInfo jsonToUserInfo:dic];
+//                [WTLoginInfo writeLoginInfo];
+//                [WTLoginInfo readLoginInfo];
 //                NSLog(@"aaaaaa");
             }
         }
