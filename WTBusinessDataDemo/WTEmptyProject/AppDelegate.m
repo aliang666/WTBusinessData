@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "WTLoginInfo.h"
+#import "WTRequestUtil.h"
+
 @interface AppDelegate ()
 
 @end
@@ -26,22 +28,13 @@
     
     [self.window makeKeyAndVisible];
     
-    NSMutableDictionary *param = [NSMutableDictionary dictionary];
-    [param setObject:@"15105609556" forKey:@"phoneNum"];
-    [param setObject:[@"12345678" md5] forKey:@"password"];
-    [param setObject:@"Did" forKey:@"did"];
-    [param setObject:@"1" forKey:@"accountType"];
-
-    [WTHttpUtil POSTWithURL:@"http://itma.openspeech.cn:8088/itmaDevice/UserLoginCMCC.do" parameters:param success:^(id responseObject) {
-        NSLog(@"aaaaaa");
-        if ([[responseObject[@"code"] strRelay] isEqualToString:@"1000"]) {
-            NSDictionary *dic = responseObject[@"content"];
-            if (dic) {
-//                [WTLoginInfo jsonToUserInfo:dic];
-//                [WTLoginInfo writeLoginInfo];
-//                [WTLoginInfo readLoginInfo];
-//                NSLog(@"aaaaaa");
-            }
+    [WTRequestUtil loginByPhone:@"15105609556" password:@"12345678" loginType:1 success:^(id responseObject) {
+        NSDictionary *dic = responseObject[@"content"];
+        if (dic) {
+            [WTLoginInfo jsonToUserInfo:dic];
+            [WTLoginInfo writeLoginInfo];
+            [WTLoginInfo readLoginInfo];
+            NSLog(@"aaaaaa");
         }
     } failure:^(NSError *error) {
         NSLog(@"bbbbbbb");
