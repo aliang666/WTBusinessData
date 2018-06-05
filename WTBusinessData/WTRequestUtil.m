@@ -1,6 +1,6 @@
 #import "WTRequestUtil.h"
 #import "NSString+Category.h"
-
+#import "WTUtil.h"
 @implementation WTRequestUtil
 + (void)loginByPhone:(NSString *)phone password:(NSString *)pass loginType:(int)loginType success:(WTHttpRequestSuccess)success failure:(WTHttpRequestFailed)failure {
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
@@ -10,7 +10,7 @@
     [param setObject:@"Did" forKey:@"did"];
 
     [WTHttpUtil POSTWithURL:[NSString stringWithFormat:@"%@%@",WT_APP_Host,WT_APP_Login_Path] parameters:param success:^(id responseObject) {
-        if ([[responseObject[@"code"] strRelay] isEqualToString:@"1000"]) {
+        if ([[WTUtil strRelay:responseObject[@"code"]] isEqualToString:@"1000"]) {
             success(responseObject);
         } else {
             
