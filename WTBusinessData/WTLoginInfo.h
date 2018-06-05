@@ -20,10 +20,16 @@
 }
 @property (nonatomic,strong) WTUser *user;
 + (instancetype)shareInstance;
+//json转用户信息
 + (void)jsonToUserInfo:(NSDictionary *)json;
+//判断是否登录
 + (BOOL)isLogin;
+//写用户信息
 + (void)writeLoginInfo;
+//从文件读取用户信息
 + (void)readLoginInfo;
+//是否是第三方登录
++ (BOOL)isThird;
 @end
 
 

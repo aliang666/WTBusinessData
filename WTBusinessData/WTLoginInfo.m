@@ -1,7 +1,7 @@
 #import "WTLoginInfo.h"
 #import "MJExtension.h"
 #import "WTFile.h"
-
+#import "WTUtil.h"
 @implementation WTUser
 @end
 
@@ -31,6 +31,16 @@
 + (NSString *)loginFilePath {
     NSString *path = [WTFile fileDocDir:@"login.txt"];
     return path;
+}
+
++ (BOOL)isThird {
+    BOOL isThird = NO;
+    if ([[WTUtil strRelay:[WTLoginInfo shareInstance].user.id] hasPrefix:@"QQ_"] ||
+        [[WTUtil strRelay:[WTLoginInfo shareInstance].user.id] hasPrefix:@"SinaWeibo_"] ||
+        [[WTUtil strRelay:[WTLoginInfo shareInstance].user.id] hasPrefix:@"Wechat_"]) {
+        isThird = YES;
+    }
+    return isThird;
 }
 
 + (void)writeLoginInfo {
