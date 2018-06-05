@@ -25,7 +25,7 @@
     if ([WTLoginInfo shareInstance].user!=nil) {
         t = YES;
     }
-    return NO;
+    return t;
 }
 
 + (NSString *)loginFilePath {
